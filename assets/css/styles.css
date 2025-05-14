@@ -29,14 +29,6 @@ header {
   background-color: var(--eds-dark);
 }
 
-:root {
-  --eds-gold: #bfaf4e;
-  --eds-dark: #212529;
-  --eds-red: #db1f1f;
-  --eds-light: #f8f9fa;
-}
-
-
 footer {
   background-color: var(--eds-dark);
 }
@@ -106,4 +98,19 @@ a:hover {
 /* Contact */
 #contact a {
   font-weight: bold;
+}
+/* Banner Logo Styling */
+.banner-wrapper {
+  background-color: #000; /* Full-width black background */
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.banner-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
