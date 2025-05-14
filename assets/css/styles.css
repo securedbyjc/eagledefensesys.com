@@ -1,10 +1,15 @@
 /* assets/css/styles.css - Custom styles for Eagle Defense Systems LLC */
 
 /* Typography */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background-color: #f8f9fa;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 h1, h2, h3, h4, h5 {
@@ -29,18 +34,6 @@ header {
   --eds-dark: #212529;
   --eds-red: #db1f1f;
   --eds-light: #f8f9fa;
-}
-
-/* Banner Styling */
-.banner-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: contain;
-  background-color: var(--eds-dark);
-  padding: 0.5rem 0;
-  border-bottom: 2px solid var(--eds-gold);
 }
 
 
