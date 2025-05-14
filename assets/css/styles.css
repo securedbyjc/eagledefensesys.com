@@ -5,7 +5,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f8f9fa;
+  background-color: red; /* TEMP: just to confirm override */
   background-image: url('/assets/images/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
