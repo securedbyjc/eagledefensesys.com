@@ -1,0 +1,96 @@
+/* assets/css/styles.css - Custom styles for Eagle Defense Systems LLC */
+
+/* Typography */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Branding Colors */
+:root {
+  --eds-gold: #bfa14e;
+  --eds-dark: #212529;
+  --eds-red: #8b1f1f;
+  --eds-light: #f8f9fa;
+}
+
+header {
+  background-color: var(--eds-dark);
+}
+
+footer {
+  background-color: var(--eds-dark);
+}
+
+.navbar-light .navbar-brand {
+  color: var(--eds-gold);
+  font-weight: bold;
+}
+
+.navbar-light .nav-link {
+  color: var(--eds-dark);
+}
+
+.navbar-light .nav-link:hover {
+  color: var(--eds-red);
+}
+
+/* Section Styling */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+section h2 {
+  border-bottom: 2px solid var(--eds-gold);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Links */
+a {
+  color: var(--eds-red);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--eds-gold);
+  text-decoration: underline;
+}
+
+/* Utilities */
+.text-gold {
+  color: var(--eds-gold);
+}
+.text-red {
+  color: var(--eds-red);
+}
+.bg-gold {
+  background-color: var(--eds-gold);
+  color: #fff;
+}
+.bg-red {
+  background-color: var(--eds-red);
+  color: #fff;
+}
+
+/* Capability List */
+#capabilities ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+#capabilities li {
+  margin-bottom: 0.5rem;
+}
+
+/* Contact */
+#contact a {
+  font-weight: bold;
+}
