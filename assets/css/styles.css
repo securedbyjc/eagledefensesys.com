@@ -24,6 +24,26 @@ header {
   background-color: var(--eds-dark);
 }
 
+:root {
+  --eds-gold: #bfaf4e;
+  --eds-dark: #212529;
+  --eds-red: #db1f1f;
+  --eds-light: #f8f9fa;
+}
+
+/* Banner Styling */
+.banner-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  background-color: var(--eds-dark);
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--eds-gold);
+}
+
+
 footer {
   background-color: var(--eds-dark);
 }
