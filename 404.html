@@ -11,13 +11,19 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1XP56624Y"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-F1XP56624Y');
-  </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1XP56624Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-F1XP56624Y');
+  gtag('event', 'page_not_found', {
+    'event_category': 'Errors',
+    'event_label': document.referrer || 'direct',
+    'page_location': window.location.href
+  });
+</script>
+
 
   <style>
     body {
