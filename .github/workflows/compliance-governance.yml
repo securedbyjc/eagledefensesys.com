@@ -1,4 +1,4 @@
-yname: EDS Compliance Governance CI/CD - Phase 2
+name: EDS Compliance Governance CI/CD - Phase 2
 
 on:
   push:
