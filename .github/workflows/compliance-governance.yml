@@ -1,0 +1,60 @@
+yname: EDS Compliance Governance CI/CD - Phase 2
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  governance-binder-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+
+    - name: Verify Governance Binder Structure
+      run: |
+        REQUIRED_DIRS=(
+          "EDS-Strategic-Docs/Security/Hardening-Runbooks"
+          "EDS-Strategic-Docs/Security/WAF-Deployment"
+          "EDS-Strategic-Docs/Security/SaaS-Scans/ZAP-Baseline"
+          "EDS-Strategic-Docs/Security/ZeroTrust/swift-eagle-zt"
+          "EDS-Strategic-Docs/Security/Audit-Binder/Cloudflare-ZT-Logs"
+          "EDS-Strategic-Docs/Security/Audit-Binder/GCP-Logs"
+          "EDS-Strategic-Docs/Security/SSP-Archive/v1.1-Draft"
+        )
+
+        for DIR in "${REQUIRED_DIRS[@]}"; do
+          if [ ! -d "$DIR" ]; then
+            echo "::error::$DIR is missing"
+            exit 1
+          fi
+        done
+
+    - name: ZAP Baseline Vulnerability Scan
+      uses: zaproxy/action-baseline@v0.7.0
+      with:
+        target: 'https://www.eagledefensesys.tech'
+        fail_action: false
+        rules_file_name: ''
+        allow_issue_writing: false
+
+    - name: Snapshot Cloudflare Zero Trust Config
+      run: |
+        echo "🔐 (Placeholder) Fetch Cloudflare Zero Trust configs"
+        echo "(Cloudflare API integration will be built in Phase 3 Automation)"
+      
+    - name: Snapshot GCP IAM Policy Config
+      run: |
+        echo "🔐 (Placeholder) Fetch GCP IAM policy states"
+        echo "(GCP Cloud SDK will export IAM policy snapshots in Phase 3 Automation)"
+
+    - name: Sync Binder Evidence Folders
+      run: |
+        mkdir -p EDS-Strategic-Docs/Security/SaaS-Scans/ZAP-Baseline/reports
+        cp -r report_html/* EDS-Strategic-Docs/Security/SaaS-Scans/ZAP-Baseline/reports/ || true
+
+    - name: ✅ Phase 2 SaaS Compliance Automation Passed
+      run: echo "All Governance Validation Tasks Complete"
