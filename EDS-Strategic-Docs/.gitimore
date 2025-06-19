@@ -1,0 +1,19 @@
+# Ignore all internal lab documentation (private lab work)
+internal-labs/
+
+# Ignore all client consulting documents (contracts, policies, assessments)
+client-consulting/
+
+# Ignore any local backups or temporary files you may create
+*.bak
+*.tmp
+*.log
+*.old
+~$*
+
+# Ignore system-specific files (Windows/VSCode/others)
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
