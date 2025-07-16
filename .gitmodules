@@ -1,0 +1,3 @@
+[submodule "coap-core-service"]
+	path = coap-core-service
+	url = https://github.com/securedbyjc/coap-core-service.git
