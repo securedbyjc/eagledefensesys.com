@@ -1,0 +1,84 @@
+name: COAP Civic Oversight Tracker
+description: Project board for COAP (Civic Oversight & Accountability Platform) SDLC and Sprint Management
+public: false
+organization_permission: write
+workflows:
+  - name: Triage New Issues
+    on:
+      issues:
+        types: [opened]
+    actions:
+      - type: add_to_column
+        column: Backlog
+      - type: add_labels
+        labels: ["needs-triage"]
+
+columns:
+  - name: Backlog
+    description: Raw and unprioritized ideas or requests
+  - name: Ready for Sprint
+    description: Prioritized stories tagged for upcoming work
+  - name: In Progress
+    description: Tasks currently under active development
+  - name: Needs Review / Test
+    description: Features complete but pending validation or refactor
+  - name: Done
+    description: Closed and validated deliverables
+
+labels:
+  - name: feature
+    description: New functional capability
+    color: "#1D76DB"
+  - name: bug
+    description: Error or defect in functionality
+    color: "#D73A4A"
+  - name: infra
+    description: DevOps, setup, deployment, or architecture
+    color: "#7057FF"
+  - name: security
+    description: Auth, encryption, privacy, audit, or ACL
+    color: "#B60205"
+  - name: MVD
+    description: Minimum Viable Demo deliverable
+    color: "#FBCA04"
+  - name: future
+    description: Parked idea for later execution
+    color: "#0E8A16"
+  - name: urgent
+    description: Critical, time-sensitive, or strategic priority
+    color: "#E99695"
+
+templates:
+  - name: Feature Request
+    description: Request for a new COAP feature or enhancement
+    body: |
+      ### Summary
+      _Clearly describe the proposed feature._
+
+      ### User Story
+      As a [user type], I want [goal] so that [benefit].
+
+      ### Acceptance Criteria
+      - [ ] Criteria 1
+      - [ ] Criteria 2
+
+      ### Notes
+      _Optional technical notes or mockups_
+
+  - name: Bug Report
+    description: Report a defect or broken functionality
+    body: |
+      ### Bug Summary
+      _Describe what’s broken._
+
+      ### Reproduction Steps
+      1. Go to...
+      2. Click...
+      3. Observe...
+
+      ### Expected Behavior
+      _What should happen?_
+
+      ### Logs or Screenshots
+      _Attach if available_
+
