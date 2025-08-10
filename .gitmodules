@@ -5,3 +5,7 @@
 	path = lexsentinel
 	url = https://github.com/securedbyjc/lexsentinel-ai.git
 	branch = main
+[submodule "Hide-Site-AI-Red-Team"]
+	path = Hide-Site-AI-Red-Team
+	url = https://github.com/securedbyjc/EDS-Hide-Site-AI-Red-Team.git
+	branch = main
