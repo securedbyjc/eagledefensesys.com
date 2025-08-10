@@ -1,3 +1,7 @@
 [submodule "coap-core-service"]
 	path = coap-core-service
 	url = https://github.com/securedbyjc/coap-core-service.git
+[submodule "lexsentinel"]
+	path = lexsentinel
+	url = https://github.com/securedbyjc/lexsentinel-ai.git
+	branch = main
