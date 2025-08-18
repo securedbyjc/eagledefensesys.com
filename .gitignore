@@ -27,3 +27,18 @@ dist-ssr
 ..bfg-report/
 terraform-foundation*/
 bfg.jar
+.continue/secrets.json
+
+# Environment variables
+.env
+.env
+.env.*
+
+# Ignore Continue’s local caches / indexes / sessions
+.continue/**
+# keep only the configs you want tracked:
+!.continue/config.yaml
+!.continue/mcpServers/**
+!.continue/mcp.json
+# DO NOT track secrets
+.continue/secrets.json

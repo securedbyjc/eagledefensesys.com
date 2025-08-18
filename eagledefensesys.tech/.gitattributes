@@ -1,0 +1,35 @@
+# ---- Text normalization (default LF) ----
+*           text=auto eol=lf
+
+# Windows scripts keep CRLF
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+
+# Shell scripts should be LF
+*.sh        text eol=lf
+
+# Common texty file types (explicit)
+*.ts        text
+*.tsx       text
+*.js        text
+*.jsx       text
+*.json      text
+*.md        text
+*.yml       text
+*.yaml      text
+*.sql       text
+*.css       text
+*.html      text
+
+# Treat these as binary (no line-ending changes)
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.webp      binary
+*.pdf       binary
+*.zip       binary
+*.jar       binary
+*.exe       binary
+*.dll       binary
+*.ico       binary
