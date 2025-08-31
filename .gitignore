@@ -7,54 +7,61 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node / build
 node_modules
 dist
 dist-ssr
 *.local
 
-# Editor directories and files
+# Editors / OS junk
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# scratch
+# Scratch
 ..bfg-report/
 terraform-foundation*/
 bfg.jar
-.continue/secrets.json
 
-# Environment variables
-.env
+# Environment files
 .env
 .env.*
+# (avoid duplicates↑)
 
-# Ignore Continue’s local caches / indexes / sessions
+# Continue (IDE) — ignore most, allow specific configs
 .continue/**
-# keep only the configs you want tracked:
 !.continue/config.yaml
 !.continue/mcpServers/**
 !.continue/mcp.json
 # DO NOT track secrets
 .continue/secrets.json
 
-# Ignore Python cache
+# Python
 __pycache__/
 *.pyc
 *.pyo
-
-# Ignore virtual environments
 .venv/
 env/
+venv/
 
-# Ignore output Excel reports
+# Terraform (common)
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.*
+crash.log
+*.tfvars
+*.tfvars.json
+
+# Output artifacts
 demos/gcp-audit-evidence/output/*.xlsx
 
-# Ignore local configs
-*.log
+# Temp
 *.tmp
