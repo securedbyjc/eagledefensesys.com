@@ -42,3 +42,19 @@ bfg.jar
 !.continue/mcp.json
 # DO NOT track secrets
 .continue/secrets.json
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environments
+.venv/
+env/
+
+# Ignore output Excel reports
+demos/gcp-audit-evidence/output/*.xlsx
+
+# Ignore local configs
+*.log
+*.tmp
