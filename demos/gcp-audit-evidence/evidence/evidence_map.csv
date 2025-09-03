@@ -1,3 +1,0 @@
-﻿ac_requirement,screenshot_filename,description,control_evidence
-AC.L2-3.1.1,AC.L2-3.1.1_iam_roles.png,"Org-level IAM roles – least privilege verified","IAM > Organization > Roles and principals"
-AC.L2-3.1.22,AC.L2-3.1.22_bucket_config.png,"GCS bucket configuration: PAP=On, Uniform access, Versioning","Cloud Storage > Bucket > Configuration / Permissions"

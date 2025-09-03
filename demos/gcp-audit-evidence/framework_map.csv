@@ -1,9 +1,0 @@
-rule_id,nist_ref,cmmc_ref,fedramp_ref,soc2_ref,iso27001_ref,excel_tab
-AUTH_BRUTE_FORCE,"AC-2, AC-7","AC.1.001, AC.2.016","Moderate/High – AC-2, AC-7","CC6.2, CC6.6","A.5.17, A.8.16","SIEM_Incidents, Findings_Detail"
-EXCESSIVE_IAM_ROLES,"AC-3, AC-6","AC.2.007, AC.3.017","Low/Moderate/High – AC-3, AC-6","CC6.1, CC6.3","A.5.15, A.5.18","Findings_Detail, Framework_Mapping"
-PUBLIC_GCS_BUCKET,"AC-4, AC-22","AC.1.002, SC.1.175","Moderate/High – AC-4, AC-22","CC6.7, CC7.2","A.8.12, A.8.24","Findings_Detail, Framework_Mapping"
-DORMANT_USER_ACCOUNT,"AC-2, AC-5","AC.2.016, AC.2.009","Moderate – AC-2, AC-5","CC6.3","A.5.15","Findings_Detail"
-REMOTE_LOGIN_NO_MFA,"AC-17, IA-2","AC.2.005, IA.1.076","Moderate/High – AC-17, IA-2","CC6.7, CC7.2","A.5.17, A.8.16","SIEM_Incidents, Framework_Mapping"
-SESSION_IDLE_TIMEOUT,"AC-11, AC-12","AC.2.015","Moderate – AC-11, AC-12","CC6.7","A.5.15, A.8.16","Findings_Detail"
-SCUBA_PUBLIC_ACCESS,"AC-3","AC.L2-3.1.2","Moderate – AC-3","CC6.1","A.9.1.2","ScubaGoggles_Assessment"
-SCUBA_ADMIN_ROLE,"AC-2","AC.L2-3.1.1","Moderate – AC-2","CC6.2","A.9.2.1","ScubaGoggles_Assessment"
