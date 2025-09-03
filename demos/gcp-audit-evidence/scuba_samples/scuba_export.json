@@ -1,0 +1,23 @@
+{
+  "resources": [
+    {
+      "name": "//storage.googleapis.com/projects/_/buckets/eds-demo-bucket",
+      "type": "storage.googleapis.com/Bucket",
+      "project_id": "eds-mock",
+      "iam": {
+        "bindings": [
+          { "role": "roles/storage.objectViewer", "members": ["allUsers"] },
+          { "role": "roles/owner", "members": ["user:alice@eagledefensesys.tech"] }
+        ]
+      }
+    },
+    {
+      "name": "//cloudresourcemanager.googleapis.com/projects/123456789",
+      "type": "cloudresourcemanager.googleapis.com/Project",
+      "project_id": "eds-mock",
+      "bindings": [
+        { "role": "roles/resourcemanager.projectIamAdmin", "members": ["group:sec-admins@eagledefensesys.tech"] }
+      ]
+    }
+  ]
+}

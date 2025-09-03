@@ -1,0 +1,59 @@
+[
+  {
+    "event_time": "2025-08-30T12:00:00Z",
+    "project": "eds-prod",
+    "resource": "projects/1111/buckets/eds-public-assets",
+    "severity": "HIGH",
+    "category": "Storage Public Access",
+    "rule_id": "PUBLIC_GCS_BUCKET",
+    "description": "Bucket allows allUsers read access"
+  },
+  {
+    "event_time": "2025-08-30T12:05:00Z",
+    "project": "eds-prod",
+    "resource": "projects/1111/serviceAccounts/svc-ci@eds.iam.gserviceaccount.com",
+    "severity": "MEDIUM",
+    "category": "Excessive IAM",
+    "rule_id": "EXCESSIVE_IAM_ROLES",
+    "description": "Service account has Owner on multiple projects"
+  },
+  {
+    "event_time": "2025-08-29T18:00:00Z",
+    "project": "eds-dev",
+    "resource": "projects/2222/iam/users/bob@example.com",
+    "severity": "LOW",
+    "category": "Dormant Account",
+    "rule_id": "DORMANT_USER_ACCOUNT",
+    "description": "User account inactive > 90 days"
+  },
+  {
+    "rule_id": "GCS.BUCKET.PUBLIC_ACCESS",
+    "severity": "HIGH",
+    "description": "Public principal(s) ['allUsers'] bound to roles/storage.objectViewer",
+    "resource": "//storage.googleapis.com/projects/_/buckets/eds-demo-bucket",
+    "project": "eds-mock",
+    "event_time": "2025-09-03T06:36:13Z",
+    "extras": {
+      "type": "storage.googleapis.com/Bucket",
+      "role": "roles/storage.objectViewer",
+      "members": [
+        "allUsers"
+      ],
+      "condition": {}
+    }
+  },
+  {
+    "rule_id": "GCP.IAM.HIGH_PRIV_ROLE_ASSIGNED",
+    "severity": "HIGH",
+    "description": "user:alice@eagledefensesys.tech has high-privilege role roles/owner",
+    "resource": "//storage.googleapis.com/projects/_/buckets/eds-demo-bucket",
+    "project": "eds-mock",
+    "event_time": "2025-09-03T06:36:13Z",
+    "extras": {
+      "type": "storage.googleapis.com/Bucket",
+      "role": "roles/owner",
+      "member": "user:alice@eagledefensesys.tech",
+      "condition": {}
+    }
+  }
+]
